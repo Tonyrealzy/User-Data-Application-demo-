@@ -1,0 +1,10 @@
+<div>
+    <h1>All Users View</h1>
+    <section *ngFor="let user of users">
+        <img [src] = "user.imageUrl" alt="{{user.name}}">
+       <p>Name: {{user.name}}</p>
+       <p>Email: {{user.email}}</p>
+       <a [routerLink]="['/view-details', user.id]" (click)="viewUser(user.id)">View Details</a>
+       <br><br>
+    </section>
+</div>

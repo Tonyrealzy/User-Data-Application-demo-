@@ -1,0 +1,6 @@
+<div *ngIf="user">
+    <img [src] = "user.imageUrl" alt="{{user.name}}">
+    <h3>Name: {{user.name}}</h3>
+    <h3>Email: {{user.email}}</h3>
+    <a routerLink="/homepage">Go to Home</a>
+</div>
