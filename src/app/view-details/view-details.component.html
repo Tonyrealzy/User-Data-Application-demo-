@@ -1,6 +1,27 @@
 <div *ngIf="user">
     <img [src] = "user.imageUrl" alt="{{user.name}}">
-    <h3>Name: {{user.name}}</h3>
-    <h3>Email: {{user.email}}</h3>
-    <a routerLink="/homepage">Go to Home</a>
+    <h3>{{user.name}}</h3>
+    <p>{{user.address}}</p>
+    <p>{{user.websiteUrl}}</p>
+</div>
+
+<div>
+    <h4>Company</h4>
+    <img [src] = "">
+    <p>{{user.nickname}} Engineering Ltd</p>
+    <p>Senior Software Engineer</p>
+    <p>July 2020 - Present</p>
+    <p>About Company</p>
+    <p>Nam pulvinar tortor et elit hendrerit, at aliquam dolor dignissim. Curabitur sagittis aliquet venenatis. Mauris id justo tellus. Praesent ut fringilla nisl. Pellentesque vel risus ipsum. Aliquam commodo, nunc et viverra aliquet, est mauris imperdiet quam, at convallis tortor dolor sed lacus. Aenean sed velit facilisis, luctus velit in, tempor enim.</p>
+</div>
+
+<div>
+    <h4>About</h4>
+    <p>Nulla bibendum placerat hendrerit. Sed id varius urna. Aenean pellentesque aliquet pharetra. Duis sed sapien in purus porttitor sagittis nec a leo. Suspendisse iaculis at purus eget lobortis. Aliquam eu felis euismod, luctus lorem convallis, mattis felis. Etiam in quam eros. Morbi at pharetra nisi. Duis nec lacus placerat, semper dui vel, euismod ligula. Curabitur vitae blandit sem. Etiam dignissim enim metus, eget auctor enim iaculis non. Donec elit lacus, mollis vestibulum diam et, dapibus eleifend dolor. Curabitur pellentesque, erat at iaculis molestie, enim ante venenatis justo, eu dignissim nibh nunc eget est. Vivamus nec tellus eget leo interdum maximus eu vel massa. Maecenas convallis, augue a ornare rhoncus, purus felis feugiat justo, ut laoreet sem nunc id ante.</p>
+    <h4>Contact info</h4>
+    <p>
+        {{user.address}}
+        {{user.email}}
+        {{user.phone_number}}
+    </p>
 </div>

@@ -1,9 +1,12 @@
 <div>
-    <h1>All Users View</h1>
+    <h1>User List</h1>
+    <input type="search" placeholder="Search users">
+
+
     <section *ngFor="let user of users">
         <img [src] = "user.imageUrl" alt="{{user.name}}">
-       <p>Name: {{user.name}}</p>
-       <p>Email: {{user.email}}</p>
+       <p>{{user.name}}</p>
+       <p>{{user.email}}</p>
        <a [routerLink]="['/view-details', user.id]" (click)="viewUser(user.id)">View Details</a>
        <br><br>
     </section>
