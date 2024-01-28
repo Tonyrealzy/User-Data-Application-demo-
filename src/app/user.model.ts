@@ -1,5 +1,4 @@
 export interface User {
-    nickname: string;
     id: number;
     imageUrl: string;
     name: string;
@@ -9,4 +8,5 @@ export interface User {
     address: string;
     websiteUrl: string;
     company: string;
+    nickname: string;
 }
