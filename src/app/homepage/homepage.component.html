@@ -17,7 +17,7 @@
     </div>
 
     <div class="row gx-4 gy-2">
-        <div class="col-md-4" *ngFor="let user of users">
+        <div class="col-md-4" *ngFor="let user of (searchUsers.length > 0 ? searchUsers : users)">
             <div class="card mb-3 p-0 shadow bg-body rounded" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-4 p-2">

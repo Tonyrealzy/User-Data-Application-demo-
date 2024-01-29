@@ -36,10 +36,16 @@ export class HomepageComponent implements OnInit {
   }
 
   onSearchChange(searchTerm: string): void {
+    // console.log('Search term', searchTerm);
+    
     searchTerm = searchTerm.toLowerCase();
+    // console.log('Lowercased search term:', searchTerm);
+
     this.searchUsers = this.users.filter(user => 
       (user && user.name && user.name.toLowerCase().includes(searchTerm)) || 
       (user && user.nickname && user.nickname.toLowerCase().includes(searchTerm))
     );
+
+    // console.log('Search results:', this.searchUsers);
   }
 }
