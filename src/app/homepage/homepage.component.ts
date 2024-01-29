@@ -45,7 +45,7 @@ export class HomepageComponent implements OnInit {
       (user && user.name && user.name.toLowerCase().includes(searchTerm)) || 
       (user && user.nickname && user.nickname.toLowerCase().includes(searchTerm))
     );
-
     // console.log('Search results:', this.searchUsers);
+    
   }
 }

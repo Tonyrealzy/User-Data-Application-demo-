@@ -17,19 +17,6 @@ export class CardComponent implements OnInit {
   }
   users: User[] = [];
 
-//   constructor(private UserService: UserService, private router: Router){}
-
-//   ngOnInit(): void {
-//     this.UserService.getAllUsers().subscribe(
-//       data => {
-//     this.users = data;
-//   },
-//   (error) => {
-//     console.error('Error fetching users:', error);
-//   }
-//   );
-// }
-
 viewUser(userId: number) : void {
   this.router.navigate(['/viewUser', userId]);
 }
