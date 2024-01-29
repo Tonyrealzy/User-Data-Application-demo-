@@ -1,0 +1,27 @@
+
+.card:hover {
+    background-color: #001f3f; /* Dark blue color */
+    transition: background-color 0.3s ease-in-out;
+    color: whitesmoke;
+}
+
+/* Custom styles for line under h3 */
+.texth3 {
+    position: relative;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    font-variant: small-caps;
+}
+
+.texth3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    height: 3px; /* Adjust the line thickness as needed */
+    background-color: darkgrey; 
+    border-radius: 3px;
+    margin-top: 10px;
+}

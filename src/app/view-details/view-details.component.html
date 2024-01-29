@@ -1,27 +1,59 @@
-<div *ngIf="user">
-    <img [src] = "user.imageUrl" alt="{{user.name}}">
-    <h3>{{user.name}}</h3>
-    <p>{{user.address}}</p>
-    <p>{{user.websiteUrl}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tachyons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tachyons@4.12.0/css/tachyons.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Your Page Title</title>
+</head>
+<body class="bg-light-gray pa4">
+
+<div class="container">
+    <!-- User Details -->
+    <div *ngIf="user" class="mt4">
+        <div class="d-flex flex-column items-center">
+            <img [src]="user.imageUrl" alt="{{user.name}}" class="w-25 mb3">
+            <h3 class="f3">{{user.name}}</h3>
+            <p>{{user.address}}</p>
+            <p>{{user.websiteUrl}}</p>
+        </div>
+    </div>
+
+    <!-- Company Details -->
+    <div class="mt4">
+        <h4 class="f4">Company</h4>
+        <div class="d-flex flex-column items-center">
+            <img [src]="" alt="" class="w-25 mb3">
+            <p>{{user.nickname}} Engineering Ltd</p>
+            <p>Senior Software Engineer</p>
+            <p>July 2020 - Present</p>
+            <p>About Company</p>
+            <p class="measure-wide">Nam pulvinar tortor et elit hendrerit, at aliquam dolor dignissim. Curabitur sagittis aliquet venenatis. Mauris id justo tellus. Praesent ut fringilla nisl. Pellentesque vel risus ipsum. Aliquam commodo, nunc et viverra aliquet, est mauris imperdiet quam, at convallis tortor dolor sed lacus. Aenean sed velit facilisis, luctus velit in, tempor enim.</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="mt4">
+        <h4 class="f4">About</h4>
+        <p class="measure-wide">Nulla bibendum placerat hendrerit. Sed id varius urna. Aenean pellentesque aliquet pharetra. Duis sed sapien in purus porttitor sagittis nec a leo. Suspendisse iaculis at purus eget lobortis. Aliquam eu felis euismod, luctus lorem convallis, mattis felis. Etiam in quam eros. Morbi at pharetra nisi. Duis nec lacus placerat, semper dui vel, euismod ligula. Curabitur vitae blandit sem. Etiam dignissim enim metus, eget auctor enim iaculis non. Donec elit lacus, mollis vestibulum diam et, dapibus eleifend dolor. Curabitur pellentesque, erat at iaculis molestie, enim ante venenatis justo, eu dignissim nibh nunc eget est. Vivamus nec tellus eget leo interdum maximus eu vel massa. Maecenas convallis, augue a ornare rhoncus, purus felis feugiat justo, ut laoreet sem nunc id ante.</p>
+        <h4 class="f4 mt3">Contact info</h4>
+        <p>
+            {{user.address}}<br>
+            {{user.email}}<br>
+            {{user.phone_number}}
+        </p>
+    </div>
 </div>
 
-<div>
-    <h4>Company</h4>
-    <img [src] = "">
-    <p>{{user.nickname}} Engineering Ltd</p>
-    <p>Senior Software Engineer</p>
-    <p>July 2020 - Present</p>
-    <p>About Company</p>
-    <p>Nam pulvinar tortor et elit hendrerit, at aliquam dolor dignissim. Curabitur sagittis aliquet venenatis. Mauris id justo tellus. Praesent ut fringilla nisl. Pellentesque vel risus ipsum. Aliquam commodo, nunc et viverra aliquet, est mauris imperdiet quam, at convallis tortor dolor sed lacus. Aenean sed velit facilisis, luctus velit in, tempor enim.</p>
-</div>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<div>
-    <h4>About</h4>
-    <p>Nulla bibendum placerat hendrerit. Sed id varius urna. Aenean pellentesque aliquet pharetra. Duis sed sapien in purus porttitor sagittis nec a leo. Suspendisse iaculis at purus eget lobortis. Aliquam eu felis euismod, luctus lorem convallis, mattis felis. Etiam in quam eros. Morbi at pharetra nisi. Duis nec lacus placerat, semper dui vel, euismod ligula. Curabitur vitae blandit sem. Etiam dignissim enim metus, eget auctor enim iaculis non. Donec elit lacus, mollis vestibulum diam et, dapibus eleifend dolor. Curabitur pellentesque, erat at iaculis molestie, enim ante venenatis justo, eu dignissim nibh nunc eget est. Vivamus nec tellus eget leo interdum maximus eu vel massa. Maecenas convallis, augue a ornare rhoncus, purus felis feugiat justo, ut laoreet sem nunc id ante.</p>
-    <h4>Contact info</h4>
-    <p>
-        {{user.address}}
-        {{user.email}}
-        {{user.phone_number}}
-    </p>
-</div>
+</body>
+</html>
