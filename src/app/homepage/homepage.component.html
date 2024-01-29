@@ -1,13 +1,43 @@
-<div>
-    <h1>User List</h1>
-    <input type="search" placeholder="Search users">
+<div class="container">
+    <h2>User List</h2>
+    <div class="pt-2 pb-4 search-container">
+        <span class="material-icons search">
+            search
+        </span>
+        <input 
+            type="search" 
+            placeholder="Search users"
+            class="py-2"
+            id="search"
+            [(ngModel)]="searchTerm"
+            (ngModelChange)="onSearchChange(searchTerm)"
+        >
+    
+        <i class="bi bi-sliders px-2 slider"></i>
+    </div>
 
-
-    <section *ngFor="let user of users">
-        <img [src] = "user.imageUrl" alt="{{user.name}}">
-       <p>{{user.name}}</p>
-       <p>{{user.email}}</p>
-       <a [routerLink]="['/view-details', user.id]" (click)="viewUser(user.id)">View Details</a>
-       <br><br>
-    </section>
+    <div class="row gx-4 gy-2">
+        <div class="col-md-4" *ngFor="let user of users">
+            <div class="card mb-3 p-0 shadow bg-body rounded" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-4 p-2">
+                    <img src="https://robohash.org/{{ user.name }}?size=200x200" class="img-fluid rounded-circle" alt="{{user.name}}">
+                    <!-- <img src="https://robohash.org/7" class="img-fluid rounded-circle" alt="..."> -->
+                  </div>
+                  <div class="col-8 align-self-center">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ user.name }}</h5>
+                      <p class="card-text">{{user.email}}</p>
+                    </div>
+                  </div>
+                </div>
+                <a 
+                    [routerLink]="['/view-details', user.id]" 
+                    (click)="viewUser(user.id)"
+                    class="detail-link mx-4">
+                    View Details
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
