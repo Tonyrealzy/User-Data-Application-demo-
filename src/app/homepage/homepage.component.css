@@ -1,0 +1,38 @@
+.search-container {
+    position: relative;
+}
+
+#search {
+    width: 45%;
+    border: 2px solid rgb(235, 226, 226);
+    border-radius: 8px;
+    padding-left: 35px;
+}
+
+.detail-link {
+    background-color: #1d0974;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    margin: 32px 2px;
+    padding: 6px 24px;
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+}
+
+.search {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-85%);
+    color: rgb(202, 202, 180);
+}
+
+.slider {
+    background-color: rgb(240, 243, 245);
+    padding: 7px;
+    margin-left: 4px;
+    border-radius: 4px;
+}
