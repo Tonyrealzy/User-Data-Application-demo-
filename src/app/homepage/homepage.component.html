@@ -1,5 +1,5 @@
-<div class="container">
-    <h2>User List</h2>
+<div class="container pt-4">
+    <h3>User List</h3>
     <div class="pt-2 pb-4 search-container">
         <span class="material-icons search">
             search
@@ -17,7 +17,7 @@
     </div>
 
     <div class="row gx-4 gy-2">
-        <div class="col-md-4" *ngFor="let user of (searchUsers.length > 0 ? searchUsers : users)">
+        <div class="col-md-6 col-lg-4" *ngFor="let user of (searchUsers.length > 0 ? searchUsers : users)">
             <div class="card mb-3 p-0 shadow bg-body rounded" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-4 p-2">
