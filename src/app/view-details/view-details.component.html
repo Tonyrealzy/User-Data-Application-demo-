@@ -11,18 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Your Page Title</title>
 </head>
-<body class="bg-light-gray pa4">
+<body class="bg-light-gray">
+    <div class="bg-details"></div>
+
+    <section>
 
 <div class="container">
     <!-- User Details -->
     <div *ngIf="user" class="mt4">
         <div class="d-flex flex-column items-center">
             <img [src]="user.imageUrl" alt="{{user.name}}" class="w-25 mb3">
-            <h3 class="f3">{{user.name}}</h3>
+            <h3 class="f3 fw-bold">{{user.name}}</h3>
             <p>{{user.address}}</p>
             <p>{{user.websiteUrl}}</p>
         </div>
     </div>
+</div>
+</section>
 
     <!-- Company Details -->
     <div class="mt4">
@@ -48,7 +53,7 @@
             {{user.phone_number}}
         </p>
     </div>
-</div>
+
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

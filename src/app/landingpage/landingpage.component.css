@@ -14,6 +14,8 @@
     font-variant: small-caps;
 }
 
+
+
 .texth3::after {
     content: "";
     position: absolute;
