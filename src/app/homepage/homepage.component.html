@@ -1,0 +1,43 @@
+<div class="container pt-4">
+    <h3>User List</h3>
+    <div class="pt-2 pb-4 search-container">
+        <span class="material-icons search">
+            search
+        </span>
+        <input 
+            type="search" 
+            placeholder="Search users"
+            class="py-2"
+            id="search"
+            [(ngModel)]="searchTerm"
+            (ngModelChange)="onSearchChange(searchTerm)"
+        >
+    
+        <i class="bi bi-sliders px-2 slider"></i>
+    </div>
+
+    <div class="row gx-4 gy-2">
+        <div class="col-md-6 col-lg-4" *ngFor="let user of (searchUsers.length > 0 ? searchUsers : users)">
+            <div class="card mb-3 p-0 shadow bg-body rounded" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-4 p-2">
+                    <img src="https://robohash.org/{{ user.name }}?size=200x200" class="img-fluid rounded-circle" alt="{{user.name}}">
+                    <!-- <img src="https://unsplash.com/s/photos/profile-pictures/"> -->
+                  </div>
+                  <div class="col-8 align-self-center">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ user.name }}</h5>
+                      <p class="card-text">{{user.email}}</p>
+                    </div>
+                  </div>
+                </div>
+                <a 
+                    [routerLink]="['/view-details', user.id]" 
+                    (click)="viewUser(user.id)"
+                    class="detail-link mx-4">
+                    View Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
