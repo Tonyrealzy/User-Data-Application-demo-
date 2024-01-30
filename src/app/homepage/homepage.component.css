@@ -36,3 +36,12 @@
     margin-left: 4px;
     border-radius: 4px;
 }
+
+.card {
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    color: rgb(13, 13, 68);
+}
