@@ -1,19 +1,38 @@
 <div class="container pt-4">
     <h3>User List</h3>
     <div class="pt-2 pb-4 search-container">
-        <span class="material-icons search">
-            search
-        </span>
-        <input 
-            type="search" 
-            placeholder="Search users"
-            class="py-2"
-            id="search"
-            [(ngModel)]="searchTerm"
-            (ngModelChange)="onSearchChange(searchTerm)"
-        >
-    
-        <i class="bi bi-sliders px-2 slider"></i>
+        <div class="row g-0">
+          <div class="col-6">
+            <span class="material-icons search">
+              search
+            </span>
+            <input 
+                type="search" 
+                placeholder="Search users"
+                class="py-2"
+                id="search"
+                [(ngModel)]="searchTerm"
+                (ngModelChange)="onSearchChange(searchTerm)"
+            >
+          </div>
+
+          <div class="col-6">
+            <div class="dropdown">
+              <div class="row">
+                <div class="col-3">
+                  <i class="bi bi-sliders px-2 slider" (click)="toggleDropdown()"></i>
+                </div>
+                <div class="col-3">
+                  <select class="form-select" name="users" id="users" *ngIf="isDropdownOpen" (blur)="closeDropdown()">
+                    <option value="name" (click)="toggleFilter('name')">Name</option>
+                    <option value="nickname" (click)="toggleFilter('nickname')">Nickname</option>
+                    <option value="email" (click)="toggleFilter('email')">Email Address</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
     <div class="row gx-4 gy-2">
