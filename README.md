@@ -1,4 +1,29 @@
-# ViewGallery
+# User Data Application
+
+Welcome to the User Data Application repository! This Angualar JS application was developed by **Group 5 members** of the Software Engineering track at First Bank Tech Academy as part of our program.
+
+![Image of First Bank]([https://octodex.github.com/images/yaktocat.png](https://upload.wikimedia.org/wikipedia/en/6/62/First_Bank_of_Nigeria_logo.png))
+
+## Overview
+
+The User Data Application is designed and developed to facilitate the delegates understanding of Angular JavaScript frontend framework. It provides functionalities for fetching users' data using API, search users and render users' details dynamically.
+
+## Code Structure
+
+The project follows a component-based approach, leveraging the powerful concepts of TypeScript and the Angular framework. The codebase is organized into different files and folders, ensuring a modular and maintainable structure. This separation of concerns allows for easy navigation and understanding of the application's functionality.
+
+## Instructor
+
+**Mr. Obinna Asiegbulam**, our esteemed instructor, provided guidance and support throughout the learning process.
+
+## Contributors
+
+- **Arinze Umehobi**
+- **Olaoluwa Samuel Akande**
+- **Samuel Enyeribe Oguobi**
+- **Abdulmalik Salis**
+- **Oluchi Ruth Alika**
+- **Victor Faith Omanoye**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
 

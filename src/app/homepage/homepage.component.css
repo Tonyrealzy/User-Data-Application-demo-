@@ -3,7 +3,7 @@
 }
 
 #search {
-    width: 45%;
+    width: 100%;
     border: 2px solid rgb(235, 226, 226);
     border-radius: 8px;
     padding-left: 35px;
@@ -44,4 +44,15 @@
 .card:hover {
     transform: scale(1.05);
     color: rgb(13, 13, 68);
+}
+
+.form-select {
+    width: 150px;
+    position: absolute;
+    top: 4px;
+}
+
+.dropdown {
+    padding-top: 11px;
+    padding-left: 5px;
 }
