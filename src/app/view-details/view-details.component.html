@@ -11,47 +11,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Your Page Title</title>
 </head>
-<body class="bg-light-gray">
+<body>
     <div class="bg-details"></div>
 
-    <section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 left">
+                <div class="row profile-div">
+                    <div class="col-md-12">
+                        <div class="p-3">
+                        <!-- User Details -->
+                        <div *ngIf="user" class="mt4">
+                                <div class="profile">
+                                    <div id="profile-pic">
+                                        <img src="https://robohash.org/{{ user.name }}?size=200x200" alt="{{user.name}}" id="img1">
+                                    </div>
 
-<div class="container">
-    <!-- User Details -->
-    <div *ngIf="user" class="mt4">
-        <div class="d-flex flex-column items-center">
-            <img [src]="user.imageUrl" alt="{{user.name}}" class="w-25 mb3">
-            <h3 class="f3 fw-bold">{{user.name}}</h3>
-            <p>{{user.address}}</p>
-            <p>{{user.websiteUrl}}</p>
+                                    <div class="profile-text">
+                                    <h3 class="f3 fw-bold">{{user.name}}</h3>
+                                    <p class="f3 fw-semibold ">{{user.address.street}}, {{user.address.city}}</p>
+                                    <a href="#" id="text" class="text-decoration-underline">https://www.{{user.website}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Details -->
+                <div class="line-top">
+                    <div class="row border-top mt-3 company-div">
+                        <div class="col-md-12">
+                            <div class="p-3 mx-4">
+                            <div class="company text-align-center">
+                                <section id="pix-n-write">
+                                    <h4 id="text1">Company</h4><br>
+                                    <img id="company-img" src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?cs=srgb&dl=pexels-pixabay-269077.jpg&fm=jpg" alt="{{user.company.name}}" >
+                                    <section id="about-text">
+                                        <p class="f5 fw-semibold">{{user.company.name}} Engineering Ltd</p>
+                                        <p>{{user.company.catchPhrase}},
+                                        <br> {{user.company.bs}}</p>
+                                        <p>July 2020 - Present</p>
+                                    </section>
+                                </section>
+                                    <p>About Company</p>
+                                    <p>Nam pulvinar tortor et elit hendrerit, at aliquam dolor dignissim. Curabitur sagittis aliquet venenatis. Mauris id justo tellus. Praesent ut fringilla nisl. Pellentesque vel risus ipsum. Aliquam commodo, nunc et viverra aliquet, est mauris imperdiet quam, at convallis tortor dolor sed lacus. Aenean sed velit facilisis, luctus velit in, tempor enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 right">
+                <!-- About Section -->
+                <div class="row border-left mt-3 ">
+                    <div class="col-md-12">
+                        <div class="p-6 mx-4">
+                        <div class="mt4">
+                            <h4 id="text2">About</h4>
+                            <p class="measure-wide">Nulla bibendum placerat hendrerit. Sed id varius urna. Aenean pellentesque aliquet pharetra. Duis sed sapien in purus porttitor sagittis nec a leo. Suspendisse iaculis at purus eget lobortis. Aliquam eu felis euismod, luctus lorem convallis, mattis felis. Etiam in quam eros. Morbi at pharetra nisi. Duis nec lacus placerat, semper dui vel, euismod ligula. Curabitur vitae blandit sem. Etiam dignissim enim metus, eget auctor enim iaculis non. Donec elit lacus, mollis vestibulum diam et, dapibus eleifend dolor. Curabitur pellentesque, erat at iaculis molestie, enim ante venenatis justo, eu dignissim nibh nunc eget est. Vivamus nec tellus eget leo interdum maximus eu vel massa. Maecenas convallis, augue a ornare rhoncus, purus felis feugiat justo, ut laoreet sem nunc id ante.</p><br>
+                            <h4 id="text3">Contact info</h4>
+                            <p>
+                                {{user.address.suite}}, {{user.address.street}}, {{user.address.city}}, {{user.address.zipcode}}.<br><br>
+                                {{user.email}}<br><br>
+                                {{user.phone}}
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</section>
-
-    <!-- Company Details -->
-    <div class="mt4">
-        <h4 class="f4">Company</h4>
-        <div class="d-flex flex-column items-center">
-            <img [src]="" alt="" class="w-25 mb3">
-            <p>{{user.nickname}} Engineering Ltd</p>
-            <p>Senior Software Engineer</p>
-            <p>July 2020 - Present</p>
-            <p>About Company</p>
-            <p class="measure-wide">Nam pulvinar tortor et elit hendrerit, at aliquam dolor dignissim. Curabitur sagittis aliquet venenatis. Mauris id justo tellus. Praesent ut fringilla nisl. Pellentesque vel risus ipsum. Aliquam commodo, nunc et viverra aliquet, est mauris imperdiet quam, at convallis tortor dolor sed lacus. Aenean sed velit facilisis, luctus velit in, tempor enim.</p>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <div class="mt4">
-        <h4 class="f4">About</h4>
-        <p class="measure-wide">Nulla bibendum placerat hendrerit. Sed id varius urna. Aenean pellentesque aliquet pharetra. Duis sed sapien in purus porttitor sagittis nec a leo. Suspendisse iaculis at purus eget lobortis. Aliquam eu felis euismod, luctus lorem convallis, mattis felis. Etiam in quam eros. Morbi at pharetra nisi. Duis nec lacus placerat, semper dui vel, euismod ligula. Curabitur vitae blandit sem. Etiam dignissim enim metus, eget auctor enim iaculis non. Donec elit lacus, mollis vestibulum diam et, dapibus eleifend dolor. Curabitur pellentesque, erat at iaculis molestie, enim ante venenatis justo, eu dignissim nibh nunc eget est. Vivamus nec tellus eget leo interdum maximus eu vel massa. Maecenas convallis, augue a ornare rhoncus, purus felis feugiat justo, ut laoreet sem nunc id ante.</p>
-        <h4 class="f4 mt3">Contact info</h4>
-        <p>
-            {{user.address}}<br>
-            {{user.email}}<br>
-            {{user.phone_number}}
-        </p>
+        
     </div>
 
 
