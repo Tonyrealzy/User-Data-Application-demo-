@@ -1,5 +1,3 @@
-
-
 .bg-details{
     width: 100%;
     height: 300px;
@@ -80,19 +78,3 @@
 .line-top {
     top: -30vh;
 }
-
-
-/* .profile::after {
-    content: "";
-    position: absolute;
-    left: 20;
-    bottom: 0;
-    width: 100%;
-    height: 1px; /* Adjust the line thickness as needed */
-    /* background-color: darkgrey; 
-    border-radius: 1px;
-    margin-top: 10px;
-} */
-
-
-
