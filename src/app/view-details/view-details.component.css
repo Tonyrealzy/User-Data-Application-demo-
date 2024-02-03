@@ -1,5 +1,5 @@
 .cover-photo{
-    background-image: url("https://plus.unsplash.com/premium_photo-1668157444317-e12e645899f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fG1vdW50YWluJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
+    background-image: url("https://img.freepik.com/free-photo/3d-rendering-hexagonal-texture-background_23-2150796440.jpg?size=626&ext=jpg&ga=GA1.1.1081711293.1694664522&semt=ais");
     min-height: 40vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 .profile-picture img{
     border-radius: 50%;
     border: 10px solid white;
-    background-color: gray;
+    background-color:rgb(3, 37, 38);
     width: 250px;
     height: 250px;
 }
